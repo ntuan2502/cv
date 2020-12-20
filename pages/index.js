@@ -1,65 +1,95 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Main from "../components/Main"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <title>iPortfolio Bootstrap Template - Index</title>
+        <meta content="" name="description" />
+        <meta content="" name="keywords" />
+
+        <link href="assets/img/favicon.png" rel="icon" />
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+        <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+        <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+        <link href="assets/css/style.css" rel="stylesheet" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <button type="button" className="mobile-nav-toggle d-xl-none"><i className="icofont-navigation-menu"></i></button>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+      <header id="header">
+        <div className="d-flex flex-column">
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <div className="profile">
+            <img src="assets/img/profile-img.jpg" alt="" className="img-fluid rounded-circle" />
+            <h1 className="text-light"><a href="/">Alex Smith</a></h1>
+            <div className="social-links mt-3 text-center">
+              <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
+              <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
+              <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
+              <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
+              <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <nav className="nav-menu">
+            <ul>
+              <li className="active"><a href="/"><i className="bx bx-home"></i> <span>Home</span></a></li>
+              <li><a href="#about"><i className="bx bx-user"></i> <span>About</span></a></li>
+              <li><a href="#resume"><i className="bx bx-file-blank"></i> <span>Resume</span></a></li>
+              <li><a href="#portfolio"><i className="bx bx-book-content"></i> Portfolio</a></li>
+              <li><a href="#services"><i className="bx bx-server"></i> Services</a></li>
+              <li><a href="#contact"><i className="bx bx-envelope"></i> Contact</a></li>
+
+            </ul>
+          </nav>
+          <button type="button" className="mobile-nav-toggle d-xl-none"><i className="icofont-navigation-menu"></i></button>
+
         </div>
-      </main>
+      </header>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+      <Main />
+
+      <footer id="footer">
+        <div className="container">
+          <div className="copyright">
+            &copy; Copyright <strong><span>iPortfolio</span></strong>
+          </div>
+          <div className="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
       </footer>
-    </div>
+
+      <a href="#" className="back-to-top"><i className="icofont-simple-up"></i></a>
+
+      <script src="assets/vendor/jquery/jquery.min.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+      <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+      <script src="assets/vendor/counterup/counterup.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/venobox/venobox.min.js"></script>
+      <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+      <script src="assets/vendor/typed.js/typed.min.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+
+      <script src="assets/js/main.js"></script>
+    </>
   )
 }
